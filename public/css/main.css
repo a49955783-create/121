@@ -1,0 +1,5 @@
+body{background:#020617;color:#fff;font-family:Tajawal;margin:0}
+.container{max-width:1200px;margin:auto;padding:20px}
+.card{background:rgba(255,255,255,.06);border-radius:14px;padding:14px;margin:8px 0}
+input,select,textarea{width:100%;padding:10px;border-radius:10px;border:none;margin:6px 0}
+button{background:#22c55e;border:none;border-radius:10px;padding:10px 16px}
