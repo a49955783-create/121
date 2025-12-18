@@ -1,13 +1,35 @@
-<!doctype html><html lang='ar'><head>
-<meta charset='utf-8'><title>إضافة</title>
-<link rel='stylesheet' href='css/main.css'></head>
-<body><div class='container'>
-<h2>إضافة مقابلة</h2>
-<input id='name' placeholder='الاسم'>
-<input id='nationalId' placeholder='الرقم الوطني'>
-<input id='age' placeholder='العمر'>
-<select id='mic'><option>جيدة</option><option>سيئة</option></select>
-<select id='hours'><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option></select>
-<textarea id='notes' placeholder='ملاحظات'></textarea>
-<button onclick='save()'>حفظ</button>
-</div><script src='js/add.js'></script></body></html>
+<!doctype html>
+<html lang="ar">
+<head>
+  <meta charset="utf-8">
+  <title>إضافة مقابلة</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div class="container">
+  <h2>إضافة مقابلة</h2>
+
+  <input id="name" placeholder="الاسم">
+  <input id="nationalId" placeholder="الرقم الوطني">
+  <input id="age" placeholder="العمر">
+
+  <select id="mic">
+    <option>جيدة</option>
+    <option>سيئة</option>
+  </select>
+
+  <select id="hours">
+    <option>1</option><option>2</option><option>3</option>
+    <option>4</option><option>5</option><option>6</option>
+    <option>7</option><option>8</option><option>9</option>
+    <option>10</option><option>11</option><option>12</option>
+  </select>
+
+  <textarea id="notes" placeholder="ملاحظات"></textarea>
+
+  <button onclick="save()">حفظ</button>
+</div>
+
+<script src="js/add.js"></script>
+</body>
+</html>
