@@ -1,7 +1,14 @@
-import {redis} from './_redis.js';
-import {requireAdmin} from './auth.js';
-export default async(req,res)=>{
- if(!requireAdmin(req,res))return;
- const logs=await redis.lrange('logs',0,100);
- res.json(logs);
-};
+import { redis } from "./_redis.js";
+import { isAdmin } from "./auth.js";
+
+export default async function handler(req, res) {
+  if (!isAdmin(req)) {
+    res.status(403).json([]);
+    return;
+  }
+
+  const raw = await redis.lrange("logs", 0, 200) || [];
+  const logs = raw.map(l => JSON.parse(l));
+
+  res.json(logs);
+}
