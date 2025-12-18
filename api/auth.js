@@ -1,4 +1,3 @@
-export function requireAdmin(req,res){
- if(req.headers['x-role']!=='admin'){
-  res.status(403).json({error:'forbidden'});return false;}
- return true;}
+export function isAdmin(req) {
+  return req.headers["x-role"] === "admin";
+}
