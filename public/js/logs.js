@@ -1,16 +1,17 @@
-<!doctype html>
-<html lang="ar">
-<head>
-  <meta charset="utf-8">
-  <title>سجل العمليات</title>
-  <link rel="stylesheet" href="css/main.css">
-</head>
-<body>
-<div class="container">
-  <h2>سجل العمليات</h2>
-  <div id="logs"></div>
-</div>
-
-<script src="js/logs.js"></script>
-</body>
-</html>
+fetch("/api/logs", {
+  headers: { "x-role": "admin" }
+})
+.then(res => res.json())
+.then(data => {
+  logs.innerHTML = "";
+  data.forEach(l => {
+    logs.innerHTML += `
+      <div class="card">
+        <b>${l.action}</b><br>
+        الاسم: ${l.name}<br>
+        بواسطة: ${l.by}<br>
+        ${l.at}
+      </div>
+    `;
+  });
+});
