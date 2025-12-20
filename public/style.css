@@ -1,0 +1,31 @@
+body {
+  font-family: Tahoma;
+  background: #0a2a4a;
+  color: white;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.box {
+  background: #123;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+input, select, button {
+  width: 100%;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+}
+
+button {
+  background: #1e90ff;
+  color: white;
+  cursor: pointer;
+}
