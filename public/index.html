@@ -1,15 +1,44 @@
-<!doctype html>
-<html lang="ar">
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="utf-8">
-  <title>المقابلات الصحية</title>
-  <link rel="stylesheet" href="css/main.css">
+  <meta charset="UTF-8" />
+  <title>نظام مقابلات الصحة</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<div class="container">
-  <h1>المقابلات الصحية</h1>
-  <div id="list"></div>
+
+<h1>نظام مقابلات الصحة</h1>
+
+<div class="box">
+  <input id="name" placeholder="الاسم الكامل">
+  <input id="nid" placeholder="الرقم الوطني">
+  <input id="age" type="number" placeholder="العمر">
+
+  <select id="job">
+    <option>عاطل</option>
+    <option>كهرب</option>
+    <option>تاكسي</option>
+    <option>مطعم</option>
+    <option>ورشة</option>
+    <option>شرطة</option>
+  </select>
+
+  <select id="mic">
+    <option>جودة المايك: جيدة</option>
+    <option>جودة المايك: سيئة</option>
+  </select>
+
+  <button onclick="save()">حفظ المقابلة</button>
 </div>
-<script src="js/index.js"></script>
+
+<hr>
+
+<div class="box">
+  <input id="search" placeholder="بحث بالرقم الوطني">
+  <button onclick="search()">بحث</button>
+  <pre id="result"></pre>
+</div>
+
+<script src="app.js"></script>
 </body>
 </html>
